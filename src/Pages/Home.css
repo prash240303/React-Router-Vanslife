@@ -1,0 +1,59 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+
+.Home-Body {
+  font-family: "Inter", sans-serif;
+  background-image: url("/src/assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 75vh;
+  padding: 2em;
+}
+
+.paraContent {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.home-button {
+  background: #ff8c38;
+  border-radius: 0.5em;
+  padding: 1.5em 10em;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.9462px;
+  line-height: 50px;
+  text-decoration: none;
+  color: #ffffff;
+}
+#anchor :hover {
+  background-color: rgb(228, 108, 23);
+}
+
+.footer {
+  height: 80px;
+  background: #252525;
+  text-align: center;
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #aaaaaa;
+}

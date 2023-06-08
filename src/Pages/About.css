@@ -1,0 +1,56 @@
+
+/*** ABOUT PAGE ***/
+
+
+.image-container{
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.about-page-content {
+    padding-inline: 2em;
+    color: #161616;
+    margin-bottom: 55px;
+}
+
+.about-page-content h1 {
+    line-height: 38px;
+}
+
+.about-page-content p {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.about-page-cta {
+    background-color: #FFCC8D;
+    color: #434343;
+    padding-inline: 2em;
+    padding-bottom: 3em;
+    margin-inline: 27px;
+    border-radius: 1em;
+    margin-bottom: 2em;
+
+}
+
+.about-page-cta h2 {
+   margin-bottom: 1em;
+    padding-block: 37px;
+    font-size: 32px;
+}
+
+.about-page-cta .link-button {
+    background-color: #161616;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+
+    text-decoration: none;
+}
+
+.link-container :hover
+{background: #2d2d2d;
+outline: 1px solid #696969;
+transition: 500ms ease;
+box-sizing: border-box;}

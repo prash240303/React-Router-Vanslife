@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  background: #fff7ed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.logo 
+{
+  text-decoration: none;
+  color: #000000;  color: #000000;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25.3531px;
+  line-height: 40px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 22.92px;
+}
+.menu li {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.menu li a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+.menu li :hover {
+  color: #ff8c38;
+}
