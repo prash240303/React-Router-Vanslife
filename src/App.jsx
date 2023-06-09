@@ -4,6 +4,9 @@ import "./App.css";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Vans from "./Pages/Vans"
+import "./server"
+import VansDetails from "./Pages/vansDetails";
+
 import { BrowserRouter, Routes, Route , Link} from "react-router-dom";
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/Vans" element={<Vans />} />
+        {/* colonn allws to use any variable after /vans/ */}
+        <Route path="/Vans/:id" element={<VansDetails />} />
       </Routes>
     </BrowserRouter>
      

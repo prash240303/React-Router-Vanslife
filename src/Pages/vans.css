@@ -1,0 +1,133 @@
+
+/*** VAN PAGES ***/
+
+.vanscard-link{
+    text-decoration: none;
+
+}
+.van-list-container {
+    padding-inline: 23px;
+    margin-bottom: 50px;
+}
+
+.van-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 34px;
+    margin-top: 57px;
+}
+
+.van-tile a {
+    color: #161616;
+    text-decoration: none;    
+}
+
+.van-tile img {
+width: 230px; 
+   border-radius: 12px;
+}
+
+.van-list-container button {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.van-type {
+    height: 34px;
+    /* padding: 6px 26px; */
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: 12px;
+    border: none;  padding: 8px 26px;
+    line-height: 18px;
+    border-radius: 5px;    list-style-type: none;
+
+    background-color: #FFEAD0;
+    color: #4D4D4D;
+    transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover {
+    color: #FFEAD0;
+}
+
+.van-type:focus {
+    outline: none;
+}
+
+.van-type.selected {
+    color: #ffffff;
+}
+
+ .van-type.simple.selected {
+    background-color: #E17654;
+}
+.van-type.simple:hover{
+    background: #d25e3a; box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #000000, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.van-type.rugged.selected {
+    background-color: #167c76;
+}
+.van-type.rugged:hover{
+    background-color: #0b5d58;
+    box-sizing: border-box;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #000000, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+ .van-type.luxury.selected {
+    background-color: #161616;
+}
+.van-type.luxury:hover{
+    background-color: #4d4d4d; box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #000000, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+
+.van-type.clear-filters {
+    /* margin-left: -20px; */
+    /* height: 34px; */
+    /* padding: 6px 26px; */
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    text-align: center  ;
+
+    border-radius: 5px;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #4D4D4D;
+}
+
+i[class*='van-type-'] {
+    padding: 7px 14px;
+}
+
+
+.vans-heading{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 34px;
+
+/* identical to box height, or 105% */
+
+color: #161616;
+}
+
+
+.vans-nav{
+    margin-inline: 3em;
+}
+
+
+.vans-filters-list
+{
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 12px;
+}
