@@ -57,3 +57,23 @@ nav {
 .menu li :hover {
   color: #ff8c38;
 }
+
+.host-layout-nav{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.host-layout-nav li{
+  list-style: none;
+}
+.host-layout-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px; color: #161616;
+  text-decoration: none;
+  font-weight: 600;
+}
+

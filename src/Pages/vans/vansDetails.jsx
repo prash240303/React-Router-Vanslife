@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./vanDetails.css";
-import { BeakerIcon } from "@heroicons/react/24/solid";
+import "./vanDetails.css"
 export default function VansDetails() {
   const params = useParams();
-  // console.log(params)
-
+  // console.log(params)"
   const [vanDetails, setVanDetails] = useState(null);
   React.useEffect(() => {
     fetch(`/api/vans/${params.id}`)

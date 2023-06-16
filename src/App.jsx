@@ -1,38 +1,42 @@
 import { useState } from "react";
 
-import "./App.css";
+import "../src/App.css";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import Vans from "./Pages/Vans"
+import Vans from "./Pages/vans/Vans"
 import "./server"
-import VansDetails from "./Pages/vansDetails";
-
-import { BrowserRouter, Routes, Route , Link} from "react-router-dom";
+import VansDetails from "./Pages/vans/vansDetails";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Layout from "./components/Layout";
+import Dashboard from "./Pages/host/Dashboard"
+import Income from './Pages/host/Income'
+import Reviews from './Pages/host/Reviews'
+import HostLayout from "./components/HostLayout";
 function App() {
+
+
+
   return (
-  
-      <BrowserRouter>
-   <nav>
-                <h1 > <Link to="/" className="logo"> #VANLIFE </Link></h1>
-                <ul className="menu">
-                    <li>
-                        <Link to="/about"> About</Link>
-                    </li>
-                    <li>
-                        <Link to="/vans">Vans</Link>
-                    </li>
-                </ul>
-            </nav>
+
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Vans" element={<Vans />} />
-        {/* colonn allws to use any variable after /vans/ */}
-        <Route path="/Vans/:id" element={<VansDetails />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<VansDetails />} />
+
+          <Route path="host" element={<HostLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="income" element={<Income />} />
+            <Route path="review" element={<Reviews />} />
+          </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
-     
+
   );
 }
 
 export default App;
+

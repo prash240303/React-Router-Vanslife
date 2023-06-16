@@ -20,7 +20,6 @@ export default function Home() {
             </div>
 
 
-            <div className="footer">Ⓒ 2022 #VANLIFE</div>
         </>
     );
 }
