@@ -1,46 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import "./vanDetails.css"
+import { useParams, Link, useLocation, Navigate } from "react-router-dom";
+import "./vanDetails.css";
+
 export default function VansDetails() {
   const params = useParams();
-  // console.log(params)"
+  const location = useLocation();
+
   const [vanDetails, setVanDetails] = useState(null);
-  React.useEffect(() => {
+
+  useEffect(() => {
     fetch(`/api/vans/${params.id}`)
       .then((res) => res.json())
-      .then((data) => setVanDetails(data.vans));
+      .then((data) => setVanDetails(data.vans))
+      .catch((error) => setVanDetails(null)); // Set vanDetails to null if an error occurs
   }, [params.id]);
+
+  const search = location.state && location.state.search ? location.state.search : "";
+
+  if (vanDetails === null) {
+    // Van not found, redirect to 404 page
+    return <Navigate to="/404" />;
+  }
 
   return (
     <div className="vansDetails">
+      <Link to={`..${search}`} relative="path" className="back-button">
+        &larr; <span> Back to <span>{location.state && location.state.type ? location.state.type : "all" }</span> vans</span>
+      </Link>
+
       {vanDetails ? (
         <div className="vanDetails-container">
-          <div className="backbutton-container">
-           <div className="backbutton">
-           
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-              width={24}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-              />
-            </svg>
-
-            <Link to="/vans" className="vanDetails-back">
-              back to all vans
-            </Link>
-
-            </div>
-          </div>
           <img className="van-image" src={vanDetails.imageUrl} alt="" />
           <div className={`van-type ${vanDetails.type} selected`}>
             {vanDetails.type}
