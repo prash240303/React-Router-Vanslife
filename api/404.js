@@ -1,5 +1,5 @@
 const { createRequestHandler } = require("vercel-serverless-functions");
-const { default: NotFound } = require("src/Pages/PageNotFound404.jsx");
+const { default: NotFound } = require("../PageNotFound404");
 
 module.exports = createRequestHandler({
   async render(req) {
