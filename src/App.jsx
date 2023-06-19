@@ -16,7 +16,7 @@ import VansDetailsHost from "./Pages/host/VansDetailsHost";
 import HostVanPricing from "./Pages/host/HostVanPricing";
 import HostvanPhotos from "./Pages/host/HostvanPhotos";
 import HostVanInfo from "./Pages/host/HostVanInfo";
-import NotFound from "./Pages/PageNotFound404";
+import NotFound from "../PageNotFound404";
 
 function App() {
   return (
