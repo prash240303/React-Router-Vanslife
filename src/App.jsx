@@ -12,10 +12,10 @@ import Dashboard from "./Pages/host/Dashboard"
 import Income from './Pages/host/Income'
 import Reviews from './Pages/host/Reviews'
 import HostLayout from "./components/HostLayout";
+import VansHost from "./Pages/host/VansHost"
+import VansDetailsHost from "./Pages/host/VansDetailsHost"
 function App() {
-
-
-
+ 
   return (
 
     <BrowserRouter>
@@ -29,8 +29,13 @@ function App() {
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
-            <Route path="review" element={<Reviews />} />
+            <Route path="vans" element={<VansHost/>} />
+            <Route path="vans/:id" element={<VansDetailsHost/>} />
+            <Route path="reviews" element={<Reviews />} />
+            
           </Route>
+
+
         </Route>
       </Routes>
     </BrowserRouter>
