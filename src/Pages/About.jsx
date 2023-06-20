@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import bgImg from "../assets/bg-about.png";
+import bgImg from "/assets/bg-about.png";
 import { Link } from "react-router-dom";
 
 export default function About() {
