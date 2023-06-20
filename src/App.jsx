@@ -39,9 +39,9 @@ function App() {
             </Route>
             <Route path="reviews" element={<Reviews />} />
           </Route>
-        <Route path="*" element={<NotFound />} />
         </Route>
 
+        <Route path="/*" element={<NotFound />} />
         {/* 404 Page */}
       </Routes>
     </BrowserRouter>
