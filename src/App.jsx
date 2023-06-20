@@ -38,8 +38,8 @@ function App() {
             </Route>
             <Route path="reviews" element={<Reviews />} />
           </Route>
-        </Route>
         <Route path="*" element={<NotFound />} />
+        </Route>
 
         {/* 404 Page */}
       </Routes>
