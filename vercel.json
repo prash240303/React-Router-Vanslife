@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "src/PageNotFound404.jsx" }
+      { "source": "/(.*)", "destination": "./src/PageNotFound404.jsx" }
     ]
   }
   
