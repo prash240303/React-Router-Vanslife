@@ -1,9 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
-
 export default function VansHost() {
     const [vans, setVans] = React.useState([])
-
     React.useEffect(() => {
         fetch("/api/host/vans")
             .then(res => res.json())
@@ -25,7 +23,6 @@ export default function VansHost() {
             </div>
         </Link>
     ))
-
     return (
         <section>
             <h1 className="host-vans-title">Your listed vans</h1>
@@ -35,7 +32,6 @@ export default function VansHost() {
                         <section>
                             {hostVansEls}
                         </section>
-
                     ) : (
                             <h2>Loading...</h2>
                         )

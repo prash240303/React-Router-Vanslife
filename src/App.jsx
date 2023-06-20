@@ -16,17 +16,17 @@ import VansDetailsHost from "./Pages/host/VansDetailsHost";
 import HostVanPricing from "./Pages/host/HostVanPricing";
 import HostvanPhotos from "./Pages/host/HostvanPhotos";
 import HostVanInfo from "./Pages/host/HostVanInfo";
-import NotFound from "../PageNotFound404";
+import NotFound from "./PageNotFound404";
 
 function App() {
   return (
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VansDetails />} />
-
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
@@ -39,10 +39,11 @@ function App() {
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
+        <Route path="*" element={<NotFound />} />
 
-        <Route path="/*" element={<NotFound />} />
         {/* 404 Page */}
       </Routes>
+    </BrowserRouter>
   );
 }
 

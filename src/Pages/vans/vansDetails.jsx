@@ -17,10 +17,7 @@ export default function VansDetails() {
 
   const search = location.state && location.state.search ? location.state.search : "";
 
-  if (vanDetails === null) {
-    // Van not found, redirect to 404 page
-    return <Navigate to="/404" />;
-  }
+ 
 
   return (
     <div className="vansDetails">
@@ -37,7 +34,7 @@ export default function VansDetails() {
           <h1>{vanDetails.name}</h1>
           <div>
             {" "}
-            <span className="van-price">${vanDetails.price}</span>/Day
+            {/* <span className="van-price">{vanDetails.price}</span>/Day */}
           </div>
           <p className="van-description">{vanDetails.description}</p>
           <button className="van-link-button">Rent this van</button>
