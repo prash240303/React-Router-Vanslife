@@ -2,11 +2,12 @@ import React from "react";
 import "./vans.css"
 import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
-import { getVans } from "../../../api/api";
 export default function Vans() {
   const [vans, setVans] = React.useState([]);
-  React.useEffect(async function loadVans() => {
-   const data =  
+  React.useEffect(() => {
+    fetch("/api/vans")
+      .then((res) => res.json())
+      .then((data) => setVans(data.vans));
   }, []);
 
   const [searchParams, setSearchParams] = useSearchParams();
