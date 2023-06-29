@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Vans from "./Pages/vans/Vans";
 import "./server";
 import VansDetails from "./Pages/vans/vansDetails";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 import Layout from "./components/Layout";
 import Dashboard from "./Pages/host/Dashboard";
 import Income from './Pages/host/Income';
@@ -18,14 +18,19 @@ import HostvanPhotos from "./Pages/host/HostvanPhotos";
 import HostVanInfo from "./Pages/host/HostVanInfo";
 import NotFound from "./PageNotFound404";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  Link
+} from "react-router-dom"
+import { vansloader } from "./Pages/vans/Vans";
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="vans" element={<Vans />} />
+          <Route path="vans"  loader={vansloader} element={<Vans />} />
           <Route path="vans/:id" element={<VansDetails />} />
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
@@ -40,11 +45,15 @@ function App() {
           </Route>
         <Route path="*" element={<NotFound />} />
         </Route>
+))
 
-        {/* 404 Page */}
-      </Routes>
-    </BrowserRouter>
-  );
+function App() {
+  return (
+    <RouterProvider router={router} />
+  )
 }
 
-export default App;
+export default App
+
+
+
